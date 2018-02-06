@@ -13,12 +13,52 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 
+/*
+ * REUSABLE COMPONENTS
+ */
+import ColumnMain from 'components/ColumnMain';
+import ColumnSection from 'components/ColumnSection';
+import ColumnSide from 'components/ColumnSide';
+import MainInner from 'components/MainInner';
+import H1 from 'components/H1';
+import H2 from 'components/H2';
+import TextButton from 'components/TextButton';
+import UserScore from 'components/UserScore';
+
+/*
+* COMPONENTS
+*/
+import SkillTagForm from './SkillTagForm';
+
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  
+
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <MainInner>
+        <ColumnMain>
+          <ColumnSection>
+            <H2>
+              <FormattedMessage {...messages.selfIntroductionHeader} />
+            </H2>
+          </ColumnSection>
+          <ColumnSection>
+            <H2>
+              <FormattedMessage {...messages.skillTagsHeader} />
+              <SkillTagForm>
+                <TextButton onClick={e => console.log('SANITY')}>
+                  Endorse new skill
+                </TextButton>
+              </SkillTagForm>
+              {/* <span>
+              </span> */}
+            </H2>
+          </ColumnSection>
+        </ColumnMain>
+        <ColumnSide>
+          <UserScore score={17}/>
+        </ColumnSide>
+      </MainInner>
     );
   }
 }

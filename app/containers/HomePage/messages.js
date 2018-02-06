@@ -6,8 +6,12 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  header: {
-    id: 'app.components.HomePage.header',
-    defaultMessage: 'This is HomePage component!',
+  selfIntroductionHeader: {
+    id: 'app.components.HomePage.selfIntroductionHeader',
+    defaultMessage: 'Self introduction',
+  },
+  skillTagsHeader: {
+    id: 'app.components.HomePage.skillTagsHeader',
+    defaultMessage: 'What I\'m good at',
   },
 });
