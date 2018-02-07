@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ScoreWrapper = styled.div`
-`
+const Wrapper = styled.span`
+`;
 
-export default ScoreWrapper;
+export default Wrapper;

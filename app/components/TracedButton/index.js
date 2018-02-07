@@ -24,6 +24,6 @@ const TracedButton = styled.a`
     background-color: #00A4BB;
     color: #fff;
   }
-`
+`;
 
 export default TracedButton;

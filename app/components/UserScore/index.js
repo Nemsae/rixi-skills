@@ -1,23 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
 
 import AboutScore from './AboutScore';
+import H5 from './H5';
 import Score from './Score';
 import ScoreCircle from './ScoreCircle';
 import Wrapper from './Wrapper';
-
-const H5 = styled.h5`
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: -1px;
-
-  padding-top: 40px;
-  margin-bottom: 0px;
-`;
 
 function UserScore(props) {
   return (

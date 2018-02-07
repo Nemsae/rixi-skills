@@ -16,4 +16,12 @@ export default defineMessages({
     id: 'app.components.SkillTagForm.endorse.button',
     defaultMessage: 'What I\'m good at',
   },
+  formButton: {
+    id: 'app.components.SkillTagForm.form.button',
+    defaultMessage: 'Submit',
+  },
+  formCancel: {
+    id: 'app.components.SkillTagForm.form.cancel',
+    defaultMessage: 'Cancel',
+  },
 });

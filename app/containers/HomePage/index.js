@@ -12,13 +12,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
-import FAIcon from 'react-fontawesome';
-import messages from './messages';
-
-/*
-* COMPONENTS
-*/
-import SkillTagForm from './SkillTagForm';
+// import FAIcon from 'react-fontawesome';
 
 /*
 * REUSABLE COMPONENTS
@@ -29,10 +23,25 @@ import ColumnSide from 'components/ColumnSide';
 import MainInner from 'components/MainInner';
 // import H1 from 'components/H1';
 import H2 from 'components/H2';
-import TracedButton from 'components/TracedButton';
+// import TracedButton from 'components/TracedButton';
+import SkillTagForm from 'components/SkillTagForm';
 import UserScore from 'components/UserScore';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+/*
+* COMPONENTS
+*/
+import messages from './messages';
+
+export default class HomePage extends React.Component {
+// export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  state = {
+    showTagForm: true,
+  }
+
+  triggerTagForm = () => {
+    this.setState({ showTagForm: !this.state.showTagForm });
+  }
+
   render() {
     return (
       <article>
@@ -50,13 +59,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             <ColumnSection>
               <H2>
                 <FormattedMessage {...messages.skillTagsHeader} />
-                {/* <SkillTagForm>
-                  <TracedButton onClick={(e) => console.log('SANITY')}>
-                    <FAIcon name="plus-circle" style={{ marginRight: '5px' }} />
-                    <FormattedMessage {...messages.skillTags.formButton} />
-                  </TracedButton>
-
-                </SkillTagForm> */}
+                <SkillTagForm showForm={this.state.showTagForm} trigger={this.triggerTagForm} />
               </H2>
             </ColumnSection>
           </ColumnMain>
