@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FAIcon from 'react-fontawesome';
 import { FormattedMessage } from 'react-intl';
 
+import CancelButton from 'components/CancelButton';
 import TracedButton from 'components/TracedButton';
 import UIButtonBlue from 'components/UIButtonBlue';
 
@@ -17,6 +18,9 @@ function SkillTagForm(props) {
         <UIButtonBlue onClick={props.trigger}>
           <FormattedMessage {...messages.formButton} />
         </UIButtonBlue>
+        <CancelButton onClick={props.trigger}>
+          <FormattedMessage {...messages.formCancel} />
+        </CancelButton>
       </FormWrapper>
     );
   }
