@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const TextButton = styled.a`
+const TracedButton = styled.a`
   font-size: 12px;
   font-weight: 300;\
   text-decoration: none;
@@ -26,4 +26,4 @@ const TextButton = styled.a`
   }
 `
 
-export default TextButton;
+export default TracedButton;

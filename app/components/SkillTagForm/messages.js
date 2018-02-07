@@ -6,12 +6,14 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  selfIntroductionHeader: {
-    id: 'app.components.HomePage.self_introduction.header',
-    defaultMessage: 'Self introduction',
+  skillTags: {
+    formButton: {
+      id: 'app.components.SkillTagForm.endorseButton',
+      defaultMessage: 'Endorse new skill',
+    },
   },
-  skillTagsHeader: {
-    id: 'app.components.HomePage.skill_tags.header',
+  endorseButton: {
+    id: 'app.components.SkillTagForm.endorse.button',
     defaultMessage: 'What I\'m good at',
   },
 });
