@@ -16,6 +16,9 @@ import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
 
+// Import FontAwesome CSS
+import '!!style-loader!css-loader!../themes/fontawesome/css/fontawesome-all.min.css';
+
 // Import root app
 import App from 'containers/App';
 

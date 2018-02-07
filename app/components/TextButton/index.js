@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const TextButton = styled.section`
+const TextButton = styled.a`
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 300;\
   text-decoration: none;
 
   margin-left: 10px;
