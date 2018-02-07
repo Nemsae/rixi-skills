@@ -1,0 +1,54 @@
+yarn add -D \
+  @babel/cli \
+  @babel/plugin-transform-react-constant-elements \
+  @babel/plugin-transform-react-inline-elements \
+  @babel/preset-env \
+  @babel/preset-stage-0
+yarn add -D \
+  @babel/cli \
+  @babel/eslint \
+  @babel/loader \
+  @babel/plugin-dynamic-import-node \
+  @babel/plugin-react-intl \
+  @babel/plugin-react-transform \
+  @babel/plugin-styled-components \
+  @babel/plugin-transform-es2015-modules-commonjs \
+  @babel/plugin-transform-react-constant-elements \
+  @babel/plugin-transform-react-inline-elements \
+  @babel/plugin-transform-react-remove-prop-types \
+  @babel/preset-env \
+  @babel/preset-stage-0
+yarn add -D \
+  @babel/core \
+  @babel/preset-react \
+  @babel/preset-stage-3
+  @babel/cli \
+  @babel/core \
+  @babel/eslint \
+  @babel/loader \
+  @babel/plugin-dynamic-import-node \
+  @babel/plugin-react-intl \
+  @babel/plugin-react-transform \
+  @babel/plugin-styled-components \
+  @babel/plugin-transform-es2015-modules-commonjs \
+  @babel/plugin-transform-react-constant-elements \
+  @babel/plugin-transform-react-inline-elements \
+  @babel/plugin-transform-react-remove-prop-types \
+  @babel/preset-env \
+  @babel/preset-react \
+  @babel/preset-stage-0
+"babel-cli
+"babel-core
+"babel-eslint
+"babel-loader
+"babel-plugin-dynamic-import-node
+"babel-plugin-react-intl
+"babel-plugin-react-transform
+"babel-plugin-styled-components
+"babel-plugin-transform-es2015-modules-commonjs
+"babel-plugin-transform-react-constant-elements
+"babel-plugin-transform-react-inline-elements
+"babel-plugin-transform-react-remove-prop-types
+"babel-preset-env
+"babel-preset-react
+"babel-preset-stage-0

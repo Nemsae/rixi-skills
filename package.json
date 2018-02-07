@@ -297,8 +297,5 @@
     "webpack": "3.5.5",
     "webpack-dev-middleware": "1.11.0",
     "webpack-hot-middleware": "2.18.0"
-  },
-  "resolutions": {
-    "babel-core": "^7.0.0-bridge.0"
-  },
+  }
 }

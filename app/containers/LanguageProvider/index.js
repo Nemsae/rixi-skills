@@ -14,10 +14,14 @@ import { IntlProvider } from 'react-intl';
 
 import { makeSelectLocale } from './selectors';
 
+function Fragment(props) {
+  return props.children || <span {...props} /> || null;
+}
+
 export class LanguageProvider extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <IntlProvider locale={this.props.locale} key={this.props.locale} messages={this.props.messages[this.props.locale]} textComponent={React.Fragment}>
+      <IntlProvider locale={this.props.locale} key={this.props.locale} messages={this.props.messages[this.props.locale]} textComponent={Fragment}>
         {React.Children.only(this.props.children)}
       </IntlProvider>
     );
