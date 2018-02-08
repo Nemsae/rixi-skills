@@ -12,7 +12,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
-// import FAIcon from 'react-fontawesome';
 
 /*
 * REUSABLE COMPONENTS
@@ -23,7 +22,6 @@ import ColumnSide from 'components/ColumnSide';
 import MainInner from 'components/MainInner';
 // import H1 from 'components/H1';
 import H2 from 'components/H2';
-// import TracedButton from 'components/TracedButton';
 import SkillTagForm from 'components/SkillTagForm';
 import UserScore from 'components/UserScore';
 
@@ -32,10 +30,11 @@ import UserScore from 'components/UserScore';
 */
 import messages from './messages';
 
-export default class HomePage extends React.Component {
-// export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+// export default class HomePage extends React.Component {
+export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   state = {
-    showTagForm: true,
+    showTagForm: false,
+    //  tagFormInput
   }
 
   triggerTagForm = () => {
@@ -61,6 +60,7 @@ export default class HomePage extends React.Component {
                 <FormattedMessage {...messages.skillTagsHeader} />
                 <SkillTagForm name={'John Son'} showForm={this.state.showTagForm} trigger={this.triggerTagForm} />
               </H2>
+
             </ColumnSection>
           </ColumnMain>
           <ColumnSide>

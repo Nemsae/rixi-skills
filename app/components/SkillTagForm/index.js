@@ -30,8 +30,7 @@ function SkillTagForm(props) {
         <UIHint>
           <FormattedMessage
             id="welcome"
-            /* eslint-disable quotes */
-            defaultMessage={`*This will be shown on {name}'s profile page.`}
+            defaultMessage={`*This will be shown on {name}'s profile page.`} // eslint-disable-line quotes
             values={{ name: <b>{props.name}</b> }}
           />
         </UIHint>
