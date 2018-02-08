@@ -48,8 +48,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
   handleTagSubmit = (e) => {
     e.preventDefault();
-    const tag = this.state.tagInput;
-    console.log('tag:handleTagSubmit ', tag);
+    // const tag = this.state.tagInput;
     this.setState({ tagInput: '' });
   }
 
@@ -68,6 +67,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
               </H2>
             </ColumnSection>
             <ColumnSection>
+
               <H2>
                 <FormattedMessage {...messages.skillTagsHeader} />
                 <SkillTagForm
@@ -79,7 +79,9 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
                   handleSubmit={this.handleTagSubmit}
                 />
               </H2>
+
               <SkillList />
+
             </ColumnSection>
           </ColumnMain>
           <ColumnSide>
