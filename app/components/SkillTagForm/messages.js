@@ -24,4 +24,8 @@ export default defineMessages({
     id: 'app.components.SkillTagForm.form.cancel',
     defaultMessage: 'Cancel',
   },
+  formHint: {
+    id: 'app.components.SkillTagForm.form.hint',
+    defaultMessage: 'This will be shown on XXX\'s profile page.',
+  },
 });

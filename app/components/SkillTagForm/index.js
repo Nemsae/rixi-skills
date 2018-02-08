@@ -6,6 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import CancelButton from 'components/CancelButton';
 import TracedButton from 'components/TracedButton';
 import UIButtonBlue from 'components/UIButtonBlue';
+import UIHint from 'components/UIHint';
 
 import messages from './messages';
 import FormWrapper from './FormWrapper';
@@ -15,12 +16,15 @@ function SkillTagForm(props) {
   if (props.showForm) {
     return (
       <FormWrapper>
-        <UIButtonBlue onClick={props.trigger}>
+        <UIButtonBlue>
           <FormattedMessage {...messages.formButton} />
         </UIButtonBlue>
         <CancelButton onClick={props.trigger}>
           <FormattedMessage {...messages.formCancel} />
         </CancelButton>
+        <UIHint>
+          <FormattedMessage {...messages.formHint} />
+        </UIHint>
       </FormWrapper>
     );
   }
