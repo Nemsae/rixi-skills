@@ -50,6 +50,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     e.preventDefault();
     const tag = this.state.tagInput;
     console.log('tag:handleTagSubmit ', tag);
+    this.setState({ tagInput: '' });
   }
 
   render() {
