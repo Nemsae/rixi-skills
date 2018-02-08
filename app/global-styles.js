@@ -24,7 +24,10 @@ injectGlobal`
 
   p,
   label {
-    ${'' /* font-family: Georgia, Times, 'Times New Roman', serif; */}
     line-height: 1.5em;
+  }
+
+  input {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 `;

@@ -59,7 +59,7 @@ export default class HomePage extends React.Component {
             <ColumnSection>
               <H2>
                 <FormattedMessage {...messages.skillTagsHeader} />
-                <SkillTagForm showForm={this.state.showTagForm} trigger={this.triggerTagForm} />
+                <SkillTagForm name={'John Son'} showForm={this.state.showTagForm} trigger={this.triggerTagForm} />
               </H2>
             </ColumnSection>
           </ColumnMain>

@@ -10,12 +10,17 @@ import UIHint from 'components/UIHint';
 
 import messages from './messages';
 import FormWrapper from './FormWrapper';
+import Input from './Input';
+import TypeaheadPlaceholder from './TypeaheadPlaceholder';
 import Wrapper from './Wrapper';
 
 function SkillTagForm(props) {
   if (props.showForm) {
     return (
       <FormWrapper>
+        <TypeaheadPlaceholder>
+          <Input autoComplete="off" placeholder="Input skill..." type="text" spellcheck="false" dir="auto" />
+        </TypeaheadPlaceholder>
         <UIButtonBlue>
           <FormattedMessage {...messages.formButton} />
         </UIButtonBlue>
@@ -23,7 +28,12 @@ function SkillTagForm(props) {
           <FormattedMessage {...messages.formCancel} />
         </CancelButton>
         <UIHint>
-          <FormattedMessage {...messages.formHint} />
+          <FormattedMessage
+            id="welcome"
+            /* eslint-disable quotes */
+            defaultMessage={`*This will be shown on {name}'s profile page.`}
+            values={{ name: <b>{props.name}</b> }}
+          />
         </UIHint>
       </FormWrapper>
     );
@@ -42,6 +52,7 @@ function SkillTagForm(props) {
 SkillTagForm.propTypes = {
   showForm: PropTypes.bool,
   trigger: PropTypes.func,
+  name: PropTypes.string,
 };
 
 export default SkillTagForm;
