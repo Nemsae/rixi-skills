@@ -1,32 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import List from 'components/List';
-// import ListItem from 'components/ListItem';
+import List from 'components/List';
+import ListItem from 'components/ListItem';
 // import LoadingIndicator from 'components/LoadingIndicator';
 // import RepoListItem from 'containers/RepoListItem';
-import Ul from './Ul';
+import Ul from 'components/Ul';
 
-function SkillList({ loading, error, repos }) {
+function SkillList({ loading, error, skills }) {
   // if (loading) {
   //   return <List component={LoadingIndicator} />;
   // }
 
-  // if (error !== false) {
-  //   const ErrorComponent = () => (
-  //     <ListItem item={'Something went wrong, please try again!'} />
-  //   );
-  //   return <List component={ErrorComponent} />;
-  // }
+  if (error !== false) {
+    const ErrorComponent = () => (
+      <ListItem item={'Something went wrong, please try again!'} />
+    );
+    return <List component={ErrorComponent} />;
+  }
 
-  // if (repos !== false) {
-  //   // return <List items={repos} component={RepoListItem} />;
-  //   return (
-  //     <Ul>
-  //
-  //     </Ul>
-  //   );
-  // }
+  if (skills !== false) {
+    // return <List items={skills} component={RepoListItem} />;
+  }
 
   // return null;
   return <div>SANITY</div>;
@@ -35,7 +30,7 @@ function SkillList({ loading, error, repos }) {
 SkillList.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.any,
-  repos: PropTypes.any,
+  skills: PropTypes.any,
 };
 
 export default SkillList;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: -1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 `;
 
 export default Ul;
