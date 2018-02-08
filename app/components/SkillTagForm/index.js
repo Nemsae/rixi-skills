@@ -29,7 +29,7 @@ function SkillTagForm(props) {
             onChange={props.handleChange}
           />
         </TypeaheadPlaceholder>
-        <UIButtonBlue>
+        <UIButtonBlue onClick={props.handleSubmit}>
           <FormattedMessage {...messages.formButton} />
         </UIButtonBlue>
         <CancelButton onClick={props.trigger}>
@@ -60,6 +60,7 @@ SkillTagForm.propTypes = {
   showForm: PropTypes.bool,
   trigger: PropTypes.func,
   handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
   name: PropTypes.string,
   value: PropTypes.string,
 };
