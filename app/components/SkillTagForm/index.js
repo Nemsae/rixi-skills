@@ -19,7 +19,15 @@ function SkillTagForm(props) {
     return (
       <FormWrapper>
         <TypeaheadPlaceholder>
-          <Input autoComplete="off" placeholder="Input skill..." type="text" spellcheck="false" dir="auto" />
+          <Input
+            autoComplete="off"
+            placeholder="Input skill..."
+            type="text"
+            spellcheck="false"
+            dir="auto"
+            value={props.value}
+            onChange={props.handleChange}
+          />
         </TypeaheadPlaceholder>
         <UIButtonBlue>
           <FormattedMessage {...messages.formButton} />
@@ -51,7 +59,9 @@ function SkillTagForm(props) {
 SkillTagForm.propTypes = {
   showForm: PropTypes.bool,
   trigger: PropTypes.func,
+  handleChange: PropTypes.func,
   name: PropTypes.string,
+  value: PropTypes.string,
 };
 
 export default SkillTagForm;

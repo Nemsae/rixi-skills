@@ -35,11 +35,16 @@ import messages from './messages';
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   state = {
     showTagForm: false,
-    //  tagFormInput
+    tagInput: '',
   }
 
   triggerTagForm = () => {
     this.setState({ showTagForm: !this.state.showTagForm });
+  }
+
+  handleTagChange = (e) => {
+    const value = e.target.value;
+    this.setState({ tagInput: value });
   }
 
   render() {
@@ -59,7 +64,13 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             <ColumnSection>
               <H2>
                 <FormattedMessage {...messages.skillTagsHeader} />
-                <SkillTagForm name={'John Son'} showForm={this.state.showTagForm} trigger={this.triggerTagForm} />
+                <SkillTagForm
+                  name={'John Son'}
+                  value={this.state.tagInput}
+                  showForm={this.state.showTagForm}
+                  trigger={this.triggerTagForm}
+                  handleChange={this.handleTagChange}
+                />
               </H2>
               <SkillList />
             </ColumnSection>
