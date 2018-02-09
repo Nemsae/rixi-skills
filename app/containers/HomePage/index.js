@@ -53,8 +53,8 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   }
 
   render() {
-    const placeholderSkillItems = {
-      error: true,
+    const fauxSkillData = {
+      error: false,
       loading: false,
       skills: false,
     };
@@ -86,7 +86,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
                 />
               </H2>
 
-              <SkillList {...placeholderSkillItems} />
+              <SkillList {...fauxSkillData} />
 
             </ColumnSection>
           </ColumnMain>

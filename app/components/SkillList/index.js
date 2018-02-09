@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 
 import List from 'components/List';
 import ListItem from 'components/ListItem';
 // import LoadingIndicator from 'components/LoadingIndicator';
-// import RepoListItem from 'containers/RepoListItem';
-import Ul from 'components/Ul';
+import SkillListItem from 'components/SkillListItem';
+
+import EmptyMessage from './EmptyMessage';
+import ErrorMessage from './ErrorMessage';
 
 function SkillList({ loading, error, skills }) {
   // if (loading) {
@@ -13,18 +16,15 @@ function SkillList({ loading, error, skills }) {
   // }
 
   if (error !== false) {
-    const ErrorComponent = () => (
-      <ListItem item={'Something went wrong, please try again!'} />
-    );
-    return <List component={ErrorComponent} />;
+    return <List component={ErrorMessage} />;
   }
 
   if (skills !== false) {
-    // return <List items={skills} component={RepoListItem} />;
+    //  if skills are fetched, render <List /> with SkillListItem pure component
+    return <List items={skills} component={SkillListItem} />;
   }
 
-  // return null;
-  return <div>SANITY</div>;
+  return <List component={EmptyMessage} />;
 }
 
 SkillList.propTypes = {

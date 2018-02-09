@@ -3,3 +3,4 @@
 
 ## TODO:
 1. Typeahead for <SkillTagForm /> https://www.npmjs.com/package/react-typeahead
+2. Did they document and test their code?
