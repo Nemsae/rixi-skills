@@ -6,6 +6,16 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
+    overflow-y: scroll;
+  }
+
+  html {
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    line-height: 22px;
+    color: #24282A;
+    -webkit-font-smoothing: antialiased;
   }
 
   body {
@@ -17,7 +27,7 @@ injectGlobal`
   }
 
   #app {
-    background-color: #fafafa;
+    ${'' /* background-color: #fafafa; */}
     min-height: 100%;
     min-width: 100%;
   }
@@ -25,6 +35,11 @@ injectGlobal`
   p,
   label {
     line-height: 1.5em;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
   }
 
   input {

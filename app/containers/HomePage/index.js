@@ -53,10 +53,56 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   }
 
   render() {
+    const fauxSkills = [
+      {
+        id: 0,
+        name: 'MongoDB',
+        count: 2,
+      },
+      {
+        id: 1,
+        name: 'ReactJS',
+        count: 1,
+      },
+      {
+        id: 2,
+        name: 'Node.js',
+        count: 1,
+      },
+      {
+        id: 3,
+        name: 'HTML5',
+        count: 4,
+      },
+      {
+        id: 4,
+        name: 'CSS3',
+        count: 1,
+      },
+      {
+        id: 5,
+        name: 'MySQL',
+        count: 3,
+      },
+      {
+        id: 6,
+        name: 'Leadership',
+        count: 0,
+      },
+      {
+        id: 7,
+        name: 'Communication',
+        count: 0,
+      },
+    ];
+
+    const fauxSkillsSorted = fauxSkills.sort((a, b) => b.count - a.count);
+
     const fauxSkillData = {
       error: false,
       loading: false,
-      skills: false,
+      // skills: false,
+      skills: fauxSkillsSorted,
     };
 
     return (
@@ -67,13 +113,14 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         </Helmet>
         <MainInner>
           <ColumnMain>
+
             <ColumnSection>
               <H2>
                 <FormattedMessage {...messages.selfIntroductionHeader} />
               </H2>
             </ColumnSection>
-            <ColumnSection>
 
+            <ColumnSection>
               <H2>
                 <FormattedMessage {...messages.skillTagsHeader} />
                 <SkillTagForm
@@ -87,8 +134,8 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
               </H2>
 
               <SkillList {...fauxSkillData} />
-
             </ColumnSection>
+
           </ColumnMain>
           <ColumnSide>
             <UserScore score={17} />
